@@ -261,6 +261,18 @@
 </style>
 </head>
 <body>
+<script>
+  function tryNextImage(img, attempts){
+    const i = (parseInt(img.dataset.attempt) || 0) + 1;
+    if (i < attempts.length){
+      img.dataset.attempt = i;
+      img.src = attempts[i];
+    } else {
+      img.style.display = 'none';
+      img.nextElementSibling.style.display = 'flex';
+    }
+  }
+</script>
 
 <header>
   <div class="wrap nav-row">
@@ -285,7 +297,7 @@
       <p class="hero-sub">I'm a Lead Product Analyst at Media.net, where I turn experiments and data into product decisions. Trying a bunch of things, including figuring out life :)</p>
     </div>
     <div class="hero-photo">
-      <img src="photo.jpeg" alt="Parth Bhatt" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <img src="photo.jpg" data-attempt="0" alt="Parth Bhatt" onerror="tryNextImage(this, ['photo.jpg','photo.jpeg','photo.png','photo.JPG','photo.JPEG'])">
       <div class="initials" style="display:none;">PB</div>
     </div>
   </div>
@@ -313,7 +325,7 @@
 
       <div class="exp-row">
         <div class="exp-logo">
-          <img src="logos/medianet.png" alt="Media.net" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <img src="logos/medianet.png" data-attempt="0" alt="Media.net" onerror="tryNextImage(this, ['logos/medianet.png','logos/medianet.jpg','logos/medianet.jpeg','logos/medianet.svg'])">
           <span class="logo-fallback" style="display:none;">LOGO</span>
         </div>
         <div class="exp-content">
@@ -331,7 +343,7 @@
 
       <div class="exp-row">
         <div class="exp-logo">
-          <img src="logos/datahash.png" alt="DataHash" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <img src="logos/datahash.png" data-attempt="0" alt="DataHash" onerror="tryNextImage(this, ['logos/datahash.png','logos/datahash.jpg','logos/datahash.jpeg','logos/datahash.svg'])">
           <span class="logo-fallback" style="display:none;">LOGO</span>
         </div>
         <div class="exp-content">
@@ -345,7 +357,7 @@
 
       <div class="exp-row">
         <div class="exp-logo">
-          <img src="logos/centaari.png" alt="Centaari.AI" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <img src="logos/centaari.png" data-attempt="0" alt="Centaari.AI" onerror="tryNextImage(this, ['logos/centaari.png','logos/centaari.jpg','logos/centaari.jpeg','logos/centaari.svg'])">
           <span class="logo-fallback" style="display:none;">LOGO</span>
         </div>
         <div class="exp-content">
@@ -359,7 +371,7 @@
 
       <div class="exp-row">
         <div class="exp-logo">
-          <img src="logos/askfundu.png" alt="askFundu" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <img src="logos/askfundu.png" data-attempt="0" alt="askFundu" onerror="tryNextImage(this, ['logos/askfundu.png','logos/askfundu.jpg','logos/askfundu.jpeg','logos/askfundu.svg'])">
           <span class="logo-fallback" style="display:none;">LOGO</span>
         </div>
         <div class="exp-content">
@@ -405,7 +417,7 @@
     <div class="sec-label sec-label-standalone">Ventures</div>
     <div class="venture">
       <div class="exp-logo">
-        <img src="logos/gridify.png" alt="Gridify Ventures" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <img src="logos/gridify.png" data-attempt="0" alt="Gridify Ventures" onerror="tryNextImage(this, ['logos/gridify.png','logos/gridify.jpg','logos/gridify.jpeg','logos/gridify.svg'])">
         <span class="logo-fallback" style="display:none;">LOGO</span>
       </div>
       <div class="venture-body">
