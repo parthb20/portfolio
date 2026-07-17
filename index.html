@@ -68,8 +68,8 @@
   /* ---------- Hero ---------- */
   .hero{ padding:64px 0 68px; }
   .hero-grid{
-    display:grid; grid-template-columns: 1.6fr 0.5fr;
-    gap:48px; align-items:center;
+    display:grid; grid-template-columns: 1fr 260px;
+    gap:40px; align-items:center;
   }
   .hero h1{
     font-size:clamp(2.4rem, 5.2vw, 4rem);
@@ -81,7 +81,7 @@
   }
 
   .hero-photo{
-    aspect-ratio:1/1; max-width:200px; margin:0 auto; border-radius:14px; overflow:hidden;
+    aspect-ratio:242/346; width:100%; border-radius:14px; overflow:hidden;
     background:transparent; border:1.5px dashed var(--line);
     display:flex; align-items:center; justify-content:center;
   }
@@ -221,7 +221,7 @@
   }
   @media (max-width: 680px){
     .hero-grid{ grid-template-columns:1fr; gap:32px; }
-    .hero-photo{ max-width:150px; margin:0 auto; order:-1; }
+    .hero-photo{ width:150px; margin:0 auto; order:-1; }
   }
   @media (max-width: 640px){
     .menu-btn{
@@ -285,7 +285,7 @@
       <p class="hero-sub">I'm a Lead Product Analyst at Media.net, where I turn experiments and data into product decisions. Trying a bunch of things, including figuring out life :)</p>
     </div>
     <div class="hero-photo">
-      <img src="photo.jpg" alt="Parth Bhatt" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <img src="photo.jpeg" alt="Parth Bhatt" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
       <div class="initials" style="display:none;">PB</div>
     </div>
   </div>
@@ -299,7 +299,7 @@
     </div>
     <div class="fact-card">
       <div class="fact-row"><span class="fact-key">Hails from</span><span class="fact-val">Ahmedabad, Gujarat</span></div>
-      <div class="fact-row"><span class="fact-key">Work ex</span><span class="fact-val">2 years</span></div>
+      <div class="fact-row"><span class="fact-key">Work Experience</span><span class="fact-val">2 years</span></div>
       <div class="fact-row"><span class="fact-key">Open to</span><span class="fact-val">Product, Strategy &amp; Generalist roles</span></div>
     </div>
   </div>
