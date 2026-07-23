@@ -159,15 +159,24 @@
   }
   .case-study h3{ font-size:1.4rem; margin:14px 0 8px; }
   .case-study p{ color:var(--muted); font-size:0.95rem; max-width:60ch; line-height:1.6; margin:0; }
-  .case-result{ text-align:right; }
+  .case-result{
+    text-align:right; display:flex; flex-direction:column; align-items:flex-end; gap:8px;
+  }
   .case-result .big{ font-family:'Space Grotesk', sans-serif; font-size:1.6rem; font-weight:700; color:var(--accent-ink); }
-  .case-result .small{ font-size:0.78rem; color:var(--muted); margin-top:2px; }
+  .case-result .small{ font-size:0.78rem; color:var(--muted); margin-top:-4px; margin-bottom:4px; }
   .case-link{
-    display:inline-block; margin-top:14px; font-size:0.84rem; font-weight:600;
+    display:inline-block; font-size:0.84rem; font-weight:600;
     color:#fff; text-decoration:none; background:var(--accent);
     padding:9px 16px; border-radius:6px; transition:background .15s ease;
   }
   .case-link:hover{ background:var(--accent-ink); }
+  .case-link-secondary{
+    display:inline-block; font-size:0.84rem; font-weight:600;
+    color:var(--accent-ink); text-decoration:none; background:transparent;
+    border:1px solid var(--line); padding:8px 16px; border-radius:6px;
+    transition:border-color .15s ease, background .15s ease;
+  }
+  .case-link-secondary:hover{ border-color:var(--accent); background:var(--accent-soft); }
   .work-note{ margin-top:24px; font-size:0.88rem; color:var(--muted); }
 
   /* Ventures */
@@ -217,7 +226,7 @@
     nav.links{ gap:20px; }
     .about-grid{ grid-template-columns:1fr; gap:40px; }
     .case-study{ grid-template-columns:1fr; text-align:left; }
-    .case-result{ text-align:left; }
+    .case-result{ text-align:left; align-items:flex-start; }
     .venture{ flex-direction:column; }
     .venture-figure{ border-left:none; padding-left:0; text-align:left; }
     section{ padding:56px 0; }
@@ -398,7 +407,19 @@
 
       <div class="case-study">
         <div>
-          <span class="pill">Case study · National winner</span>
+          <span class="pill">Vibe Coded · 2026</span>
+          <h3>Gazette</h3>
+          <p>A visual learning aid for UPSC aspirants, built to make memory-heavy material actually stick — think biodiversity lists, constitutional amendments, and economic indices — through interactive visual challenges instead of rote reading.</p>
+        </div>
+        <div class="case-result">
+          <a class="case-link" href="https://parthb20.github.io/gazette/index.html" target="_blank" rel="noopener">App Link ↗</a>
+          <a class="case-link-secondary" href="https://github.com/parthb20/gazette" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="case-study">
+        <div>
+          <span class="pill">Case study · National winner · 2024</span>
           <h3>Threads' GTM Strategy Optimization Challenge</h3>
           <p>GTM strategy and phased rollout roadmap for Meta Threads, built on user research and a GenAI-assisted differentiation angle. Competed against 500+ participants nationally.</p>
         </div>
